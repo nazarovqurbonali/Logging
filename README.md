@@ -1,4 +1,4 @@
-`# Logging Project
+### Logging Project
 
 This project demonstrates the use of various logging libraries in .NET, including Microsoft.Extensions.Logging, Serilog, and NLog. It includes examples of logging to a file, database, and console.
 
