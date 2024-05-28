@@ -8,8 +8,11 @@ public class DataContext:DbContext
     public DataContext(DbContextOptions<DataContext> options):base(options){}
 
     public DbSet<Category> Categories { get; set; }
+    public DbSet<Log> Logs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-    =>  base.OnModelCreating(modelBuilder);
+    {
+        modelBuilder.Entity<Log>().ToTable("logs");
+    }
     
 }
