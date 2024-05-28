@@ -3,7 +3,7 @@ using Serilog;
 using Web.Data;
 using Web.Services.CateGoryService;
 
- var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args);
 
 
 var config = new ConfigurationBuilder()
@@ -14,7 +14,7 @@ var config = new ConfigurationBuilder()
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(config)
     .CreateLogger();
- 
+
 builder.Host.UseSerilog();
 
 builder.Services.AddDbContext<DataContext>(options =>
